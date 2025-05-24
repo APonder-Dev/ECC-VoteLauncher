@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ECC Voting Hub</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="Assets/CSS/style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-light bg-white shadow-sm">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center">
+        <img src="Assets/Images/ECC%20Logo.png" alt="ECC Logo" style="height: 40px;" class="me-2">
+        <a class="navbar-brand fw-bold mb-0 h1" href="#">ECC Voting Hub</a>
+      </div>
+      <span class="text-muted">play.ecocitycraft.com</span>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>Support Our Minecraft Server</h1>
+    <p>Vote daily to earn Eco VotePoints and help us grow!</p>
+  </div>
+
+  <!-- Main Content -->
+  <main class="container py-5">
+    <div class="row g-4">
+      <!-- Vote Sites Column -->
+      <div class="col-md-8">
+        <div class="vote-grid" id="voteContainer"></div>
+      </div>
+
+      <!-- Sidebar Column -->
+      <div class="col-md-4">
+        <!-- Progress Card -->
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Today's Progress</h5>
+            <p class="mb-1" id="voteCountText">0/14 votes completed</p>
+            <div class="progress">
+              <div class="progress-bar" id="progressBar" style="width: 0%;"></div>
+            </div>
+            <small class="text-muted">Vote on all sites to maximize your rewards!</small>
+          </div>
+        </div>
+
+        <!-- Username Login Card -->
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Login with Username</h5>
+            <form onsubmit="saveUsername(event)">
+              <input type="text" id="username" class="form-control mb-2" placeholder="Enter your Minecraft username">
+              <button type="submit" class="btn btn-success w-100">Login</button>
+            </form>
+            <small class="text-muted d-block mt-2">Track your vote streak and earn more rewards!</small>
+          </div>
+        </div>
+
+        <!-- Why Vote Card -->
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Why Vote?</h5>
+            <ul class="list-unstyled">
+              <li>✔ Earn 1 Eco VotePoint per vote</li>
+              <li>✔ Help our server grow</li>
+              <li>✔ Support our community</li>
+              <li>✔ Unlock perks with vote streaks</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center py-4 text-muted">
+    © 2025 ECC Voting Hub. All rights reserved.
+  </footer>
+
+  <!-- Custom JS -->
+  <script src="Assets/JS/vote.js"></script>
+</body>
+</html>
